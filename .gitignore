@@ -1,0 +1,8 @@
+.env
+settings.yaml
+data
+output
+cache
+prompts
+*.csv
+.DS_Store
