@@ -11,8 +11,6 @@ This code uses python 3.12. The requirements file outline the non-standard libra
 get-news-data.ipynb contains code to get some current news data using Fundus and dumps it in a local folder.
 
 ## Optional step - vectorise data and inspect with Qdrant
-...
-
 
 ## GraphRAG
 This largely follows the microsoft documentation that can be found below, but with a couple of changes for our usecase;
@@ -22,7 +20,12 @@ https://microsoft.github.io/graphrag/get_started/
 ### Initialize project 
 Initialize the project using the following command:
 
-`python -m graphrag.index --init --root .`
+`graphrag index --init --root .`
+
+That should create the following files and folders:
+settings.yaml
+output/
+prompts/
 
 ### Change configurations
 Go into the settings.yaml file and change a couple of fields:
@@ -41,7 +44,9 @@ input:
 ### Index documents
 In order to structure your data for querying, we need to index them using the following command:
 
-`python -m graphrag.index --root .`
+`graphrag index --root .`
+
+This should also create a cache/ folder
 
 ### Query data
 
