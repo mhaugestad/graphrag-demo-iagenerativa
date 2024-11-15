@@ -2,3 +2,4 @@ graphrag
 fundus
 scikit-learn
 langchain-text-splitters
+pyton-dotenv
